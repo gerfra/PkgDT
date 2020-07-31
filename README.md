@@ -64,6 +64,9 @@ PS: I don't offer you the compiled version because every time you write it's a v
 
 Follow the order of the buttons then look inside the patch folder your downgrade pkg file.
 
+<a href="https://drive.google.com/uc?export=view&id=1ALblN3XcRMworq0j3RBSoYNFn-vO49Ur"><img src="https://drive.google.com/uc?export=view&id=1ALblN3XcRMworq0j3RBSoYNFn-vO49Ur" style="width: 500px; max-width: 100%; height: auto" title="Click for the larger version." /></a>
+
+
 
 
 
