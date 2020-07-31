@@ -6,7 +6,7 @@ Script Function: PS4 Pkg Backporting<br>
 AutoIt Version: 3.3.14.5<br>
 Author: Francesco Gerratana<br>
 Website: Nextechnics.com<br>
-Licence: <a href="https://www.gnu.org/licenses/gpl-3.0.html>GPLv3</a><br><br>
+Licence: <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPLv3</a><br><br>
 
 <b>Legal info:<br><br>
 
