@@ -28,8 +28,15 @@ Donation<br><br>
 
 <a href="https://www.paypal.com/donate/?token=VV5v1HqWQAX8oBSY-w-GIqU-Hsp0Q8tMFOYqpFJ5liUwvg06JdJzsnxd2INpgROAX8IWAG&country.x=IT&locale.x=IT">DONATION</a><br><br>
 
-<h2>Installation</h2>
+<h2>Collaboration</h2>
 
+Dear programmers, you are welcome, improve and correct everything you find wrong, I just ask you not to fork but grow this tool, if you have a digital signature fill it in and share it with others, but do not insert adaware or viruses. Those who do not know how to program can make videos or write tutorials. I do not publish any video for copyright reasons, I just write the software. Have fun, everyone<br>
+
+<h2>Roadmap</h2>
+
+- Parsing Image0 folder and return valid .gp file, very easy but Im not sure about all tags.<br><br>
+
+<h2>Installation</h2>
 
 You must have the following files:<br><br>
 
@@ -65,6 +72,10 @@ PS: I don't offer you the compiled version because every time you write it's a v
 Follow the order of the buttons then look inside the patch folder your downgrade pkg file.
 
 <a href="https://drive.google.com/uc?export=view&id=1ALblN3XcRMworq0j3RBSoYNFn-vO49Ur"><img src="https://drive.google.com/uc?export=view&id=1ALblN3XcRMworq0j3RBSoYNFn-vO49Ur" style="width: 500px; max-width: 100%; height: auto" title="Click for the larger version." /></a>
+
+<h2>Many Thanks</h2>
+
+- Follow this website <a href="https://www.psxhax.com/threads/pkgdt-ps4-pkg-downgrade-tools-gui-for-backporting-games-by-gerfra.7752/">www.psxhax.com/</a>
 
 
 
