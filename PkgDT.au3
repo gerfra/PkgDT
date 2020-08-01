@@ -471,7 +471,7 @@ Func Img_Create()
 
 		Run_Output($runOrbis, "ReBuild Pkg")
 
-		ShellExecute($f_working)
+		ShellExecute($f_patch)
 
 	Next
 
