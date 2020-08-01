@@ -1,8 +1,18 @@
 #Region ;**** Directives created by AutoIt3Wrapper_GUI ****
 #AutoIt3Wrapper_Version=Beta
-#AutoIt3Wrapper_Icon=\res\icon.ico
+#AutoIt3Wrapper_Icon=res\icon.ico
+#AutoIt3Wrapper_Res_File_Add=res\beer.jpg
 #AutoIt3Wrapper_Run_Tidy=y
-#AutoIt3Wrapper_Run_Au3Stripper=y
+#AutoIt3Wrapper_Run_Au3Stripper=n
+#pragma compile(Icon, res\icon.ico)
+#pragma compile(UPX, false)
+#pragma compile(FileDescription, Pkg Downgrade Tool)
+#pragma compile(ProductName, PkgDT)
+#pragma compile(ProductVersion, 1.0)
+#pragma compile(ProductVersion, 1.0)
+#pragma compile(LegalCopyright, © Francesco Gerratana)
+#pragma compile(CompanyName, Nextechnics)
+#pragma compile(OriginalFilename, PkgDT.exe)
 #EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
 #cs ----------------------------------------------------------------------------
 
@@ -107,6 +117,10 @@ DirCreate(@ScriptDir & "\res")
 $ico = @ScriptDir & "\res\icon.ico"
 $jpg = @ScriptDir & "\res\beer.jpg"
 
+Local $bFileInstall = True
+If $bFileInstall Then
+	FileInstall("C:\Project\PS4\res\beer.jpg", $jpg)
+EndIf
 
 Global $cfg_ini = (@ScriptDir & "\cfg.ini")
 
