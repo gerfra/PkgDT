@@ -2,6 +2,16 @@
 #AutoIt3Wrapper_Version=Beta
 #AutoIt3Wrapper_Icon=res\icon.ico
 #AutoIt3Wrapper_Res_File_Add=res\beer.jpg
+#AutoIt3Wrapper_Res_File_Add=orbis-pub-cmd.exe
+#AutoIt3Wrapper_Res_File_Add=Unfself.exe
+#AutoIt3Wrapper_Res_File_Add=gengp4.exe
+#AutoIt3Wrapper_Res_File_Add=orbis-pub-gen.exe
+#AutoIt3Wrapper_Res_File_Add=sfo.py
+#AutoIt3Wrapper_Res_File_Add=elf.py
+#AutoIt3Wrapper_Res_File_Add=ext\di.exe
+#AutoIt3Wrapper_Res_File_Add=ext\libatrac9.dll
+#AutoIt3Wrapper_Res_File_Add=ext\sc.exe
+#AutoIt3Wrapper_Res_File_Add=ext\trp_compare_default.css
 #AutoIt3Wrapper_Run_Tidy=y
 #AutoIt3Wrapper_Run_Au3Stripper=n
 #pragma compile(Icon, res\icon.ico)
@@ -117,9 +127,20 @@ DirCreate(@ScriptDir & "\res")
 $ico = @ScriptDir & "\res\icon.ico"
 $jpg = @ScriptDir & "\res\beer.jpg"
 
+; Include all files inside your final PkgDT.exe | Change the path C:\Project\PS4\ with your current path ex: C:\Users\Sam\Desktop \PS4...
 Local $bFileInstall = True
 If $bFileInstall Then
 	FileInstall("C:\Project\PS4\res\beer.jpg", $jpg)
+	FileInstall("C:\Project\PS4\orbis-pub-cmd.exe", $orbis)
+	FileInstall("C:\Project\PS4\Unfself.exe", $unfself)
+	FileInstall("C:\Project\PS4\gengp4.exe", $gengp4)
+	FileInstall("C:\Project\PS4\orbis-pub-gen.exe", $orbis_pub_gen)
+	FileInstall("C:\Project\PS4\sfo.py", $sfo_py)
+	FileInstall("C:\Project\PS4\elf.py", $elf_py)
+	FileInstall("C:\Project\PS4\ext\di.exe", $ext & "\di.exe")
+	FileInstall("C:\Project\PS4\ext\libatrac9.dll", $ext & "\libatrac9.dll")
+	FileInstall("C:\Project\PS4\ext\sc.exe", $ext & "\sc.exe")
+	FileInstall("C:\Project\PS4\ext\trp_compare_default.css", $ext & "\trp_compare_default.css")
 EndIf
 
 Global $cfg_ini = (@ScriptDir & "\cfg.ini")
