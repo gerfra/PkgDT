@@ -26,7 +26,7 @@ Follow Me on my channel<br><br>
 
 Donation<br><br>
 
-<a href="https://www.paypal.com/donate/?token=VV5v1HqWQAX8oBSY-w-GIqU-Hsp0Q8tMFOYqpFJ5liUwvg06JdJzsnxd2INpgROAX8IWAG&country.x=IT&locale.x=IT">DONATION</a><br><br>
+<a href="https://www.paypal.com/paypalme/nextechnics/5">Click here to donate</a><br><br>
 
 <h2>Collaboration</h2>
 

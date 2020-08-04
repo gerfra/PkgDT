@@ -54,7 +54,7 @@
 
 	Donation
 
-	https://www.paypal.com/donate/?token=VV5v1HqWQAX8oBSY-w-GIqU-Hsp0Q8tMFOYqpFJ5liUwvg06JdJzsnxd2INpgROAX8IWAG&country.x=IT&locale.x=IT
+	https://www.paypal.com/paypalme/nextechnics/5
 
 	You must have the following files:
 
@@ -154,35 +154,37 @@ EndIf
 
 #Region ### START Koda GUI section ### Form=
 $Form1_1 = GUICreate("PkgDT | Ps4 Pkg Downgrade Tools | Gui | Nextechnics 2020", 801, 601, -1, -1)
-GUISetIcon($ico, -1)
+GUISetIcon("C:\Project\PS4\icon.ico", -1)
 GUISetBkColor(0x646464)
-$Button1 = GUICtrlCreateButton("Select file", 19, 78, 130, 30)
+$Button1 = GUICtrlCreateButton("Select file", 19, 62, 130, 30)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 GUICtrlSetCursor(-1, 0)
-$Button2 = GUICtrlCreateButton("Copy Boot Files", 19, 121, 130, 30)
+$Button2 = GUICtrlCreateButton("Copy Boot Files", 19, 105, 130, 30)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
-$Button3 = GUICtrlCreateButton("Unfself Eboot", 19, 165, 130, 30)
-GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
-GUICtrlSetCursor(-1, 0)
-$Button4 = GUICtrlCreateButton("Search Prx", 19, 208, 130, 30)
+$Button3 = GUICtrlCreateButton("Unfself Eboot", 19, 149, 130, 30)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 GUICtrlSetCursor(-1, 0)
-$Button5 = GUICtrlCreateButton("Unfself Prx", 19, 251, 130, 30)
+$Button4 = GUICtrlCreateButton("Search Prx", 19, 192, 130, 30)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 GUICtrlSetCursor(-1, 0)
-$Button6 = GUICtrlCreateButton("Donwgrade Prx", 19, 295, 130, 30)
+$Button5 = GUICtrlCreateButton("Unfself Prx", 19, 235, 130, 30)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 GUICtrlSetCursor(-1, 0)
-$Button7 = GUICtrlCreateButton("Copy Decrypted Prx", 19, 338, 130, 30)
+$Button6 = GUICtrlCreateButton("Donwgrade Prx", 19, 279, 130, 30)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 GUICtrlSetCursor(-1, 0)
-$Button8 = GUICtrlCreateButton("Generate .GP4", 19, 381, 130, 30)
+$Button7 = GUICtrlCreateButton("Copy Decrypted Prx", 19, 322, 130, 30)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 GUICtrlSetCursor(-1, 0)
-$Button9 = GUICtrlCreateButton("Create Pkg Patch", 19, 425, 130, 30)
+$Button8 = GUICtrlCreateButton("Generate .GP4", 19, 365, 130, 30)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 GUICtrlSetCursor(-1, 0)
-$Button10 = GUICtrlCreateButton("GitHub", 19, 468, 130, 30)
+$Button9 = GUICtrlCreateButton("Create Pkg Patch", 19, 409, 130, 30)
+GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
+GUICtrlSetCursor(-1, 0)
+$Button10 = GUICtrlCreateButton("GitHub", 19, 452, 130, 30)
+GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
+$Button11 = GUICtrlCreateButton("Reset Folders", 19, 496, 130, 30)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 $Label1 = GUICtrlCreateLabel("Log Console", 168, 24, 74, 17)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
@@ -236,7 +238,7 @@ While 1
 
 		Case $Button8
 
-			ShellExecute($gengp4)
+			Gen_Gp4()
 
 		Case $Button9
 
@@ -244,11 +246,15 @@ While 1
 
 		Case $Button10
 
-			ShellExecute("www.google.com/git")
+			ShellExecute("https://github.com/gerfra/PkgDT")
+
+		Case $Button11
+
+			EraseAll()
 
 		Case $Label2
 
-			ShellExecute("www.google.com")
+			ShellExecute("https://www.paypal.com/paypalme/nextechnics/5")
 
 	EndSwitch
 WEnd
@@ -311,7 +317,7 @@ Func Copy_Boot_file()
 		GUICtrlSetData($Edit1, @CRLF & @CRLF & "Copy File in : " & $f_decrypt & "\param.sfo", 1)
 		GUICtrlSetData($Edit1, @CRLF & @CRLF & "Copy File in : " & $f_decrypt & "\eboot.bin" & @CRLF & @CRLF, 1)
 
-		GUICtrlSetData($Edit1, "######### End Copy Boot Files #########" & @CRLF, 1)
+		GUICtrlSetData($Edit1, "######### Copy Boot Files Complete #########" & @CRLF, 1)
 
 	Else
 
@@ -411,7 +417,7 @@ Func Find_Prx()
 
 	Next
 
-	GUICtrlSetData($Edit1, "######### Start Search Prx Files #########" & @CRLF & @CRLF, 1)
+	GUICtrlSetData($Edit1, "######### Search Prx Files Complete #########" & @CRLF & @CRLF, 1)
 
 	;RunWait(@ComSpec & " /C " & "python dirstr.py",'',@SW_SHOW,BitOR($STDERR_CHILD, $STDOUT_CHILD)) ; write ps4 folder structure.... next maybe
 
@@ -479,6 +485,20 @@ Func Copy_Decrypted_Prx()
 EndFunc   ;==>Copy_Decrypted_Prx
 
 
+Func Gen_Gp4()
+
+
+	Local $runGengp4 = Run($gengp4 & " " & '"' & $f_Image0 & '"', '', @SW_HIDE, $STDERR_MERGED + $STDIN_CHILD)
+
+	ConsoleWrite($gengp4 & ' ' & '"' & $f_Image0 & '"' & @CRLF)
+
+	Run_Output($runGengp4, "Make Xml Gp4")
+
+	ShellExecute($f_working)
+
+EndFunc   ;==>Gen_Gp4
+
+
 ; Img_Create() 9 Build all .gp4 image present in the folder
 
 Func Img_Create()
@@ -502,11 +522,17 @@ EndFunc   ;==>Img_Create
 
 Func EraseAll()
 
-	DirRemove($f_unpack, 1)
-	DirRemove($f_working, 1)
-	DirRemove($f_decrypt, 1)
-	DirRemove($f_prxmod, 1)
-	DirRemove($f_patch, 1)
+	GUICtrlSetData($Edit1, @CRLF, 1)
+	Dim $Rmdir[5] = [$f_decrypt, $f_patch, $f_prxmod, $f_unpack, $f_working]
+
+	For $r = 0 To UBound($Rmdir) - 1
+
+		DirRemove($Rmdir[$r], 1)
+		ConsoleWrite("Foldere deleted " & $Rmdir[$r] & @CRLF)
+		GUICtrlSetData($Edit1, "Foldere deleted " & $Rmdir[$r] & @CRLF, 1)
+		DirCreate($Rmdir[$r])
+
+	Next
 
 EndFunc   ;==>EraseAll
 
