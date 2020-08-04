@@ -267,7 +267,8 @@ Func Selectfile()
 		$input_pkg = StringReplace($input_pkg, "|", @CRLF)
 		ConsoleWrite("You chose this file: " & $input_pkg & @CRLF)
 		GUICtrlSetData($Edit1, "You chose this file: " & $input_pkg & @CRLF, 1)
-
+		GUICtrlSetData($Edit1, "Game Id: " & BinaryToString(Get_ID_GAME($input_pkg, 0x040, 36)) & @CRLF, 1)
+		IniWrite($cfg_ini, "TITLE", "game_Id", BinaryToString(Get_ID_GAME($input_pkg, 0x040, 36)))
 		$output_pkg = FileSelectFolder("Select uncompress Pkg destination", @ScriptDir)
 		If @error Then
 			MsgBox($MB_SYSTEMMODAL, "", "No folder was selected.")
@@ -508,6 +509,18 @@ Func EraseAll()
 	DirRemove($f_patch, 1)
 
 EndFunc   ;==>EraseAll
+
+
+Func Get_ID_GAME($PkgPath, $iOffset, $iLen = 1)
+
+	Local $Id = ""
+	Local $hFile = FileOpen($PkgPath, $FO_BINARY)
+	FileSetPos($hFile, $iOffset, $FILE_BEGIN)
+	$Id = FileRead($hFile, $iLen)
+	FileClose($hFile)
+	Return $Id
+
+EndFunc   ;==>Get_ID_GAME
 
 
 ; Grab output from process
